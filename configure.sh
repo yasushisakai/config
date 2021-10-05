@@ -24,7 +24,7 @@ symlink xinitrc .xinitrc
 symlink Xmodmap .Xmodmap
 
 symlink alacritty .config/alacritty
-symlink ulauncher .config/ulancher
+symlink ulauncher .config/ulauncher
 symlink picom .config/picom
 symlink bspwm .config/bspwm
 symlink mail/mutt .config/mutt
