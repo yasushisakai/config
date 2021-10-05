@@ -1,0 +1,76 @@
+set mailcap_path="~/.config/mutt/mailcap"
+set realname = "Yasushi Sakai"
+
+## for reading emails, read from local
+
+## writing mail
+set editor = "nvim"
+
+## use flowed format
+set text_flowed
+set wrap=80
+
+# Reply to all recipients
+bind index,pager g group-reply
+
+## aliases
+source /home/yasushi/.config/mutt/aliases
+set alias_file=/home/yasushi/.config/mutt/aliases
+# auto adds 
+set display_filter=/home/yasushi/.config/mutt/autoadd_alias.sh
+
+## attempt to view html
+auto_view text/html                                      # view html automatically
+alternative_order text/plain text/enriched text/html     # save html for last
+
+# sidebar
+set sidebar_visible
+set sidebar_format = "%D%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+######################################
+# bindings
+######################################
+
+#### switch accounts
+# shift + w goes to work
+bind index,pager <Space> noop
+macro index <Space>w '<sync-mailbox><enter-command>source /home/yasushi/.config/mutt/account.gmail<enter><change-folder>!<enter>'
+# shift + p changes to private
+macro index <Space>p '<sync-mailbox><enter-command>source /home/yasushi/.config/mutt/account.fastmail<enter><change-folder>!<enter>'
+
+macro index G "!mbsync -a^M" "update through mbsync"
+set pipe_decode=yes
+
+# delete-permanent
+macro index,pager x '<delete-message>' "Delete message permanently"
+
+# scroll insde the message rather changing the index
+bind pager <up> previous-line
+bind pager <down> next-line
+
+## not much
+# 'L' performs a notmuch query, showing only the results
+macro index L "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuch query: ' x; echo \$x >~/.config/mutt/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.config/mutt/mutt_terms) | head -n 600 | perl -le '@a=<>;chomp@a;s/\^id:// for@a;$,=\"|\";print@a'\`\"<enter>" "show only messages matching a notmuch pattern"
+# 'a' shows all messages again (supersedes default <alias> binding)
+macro index a "<limit>all\n" "show all messages (undo limit)"
+
+# sidebar
+bind index,pager \Cj sidebar-next
+bind index,pager \Ck sidebar-prev
+bind index,pager \Co sidebar-open
+bind index,pager <Space>b sidebar-toggle-visible
+
+######################################
+# appearance
+######################################
+
+## URLs
+color body red default ((https?|ftp)://|www)[\-\.\;@,/%~_:?&=\#a-zA-Z0-9+*]+
+color body red default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+## Email addresses.
+color body red default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+# use account.gmail as default
+source "/home/yasushi/.config/mutt/account.gmail"

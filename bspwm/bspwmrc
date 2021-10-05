@@ -1,0 +1,35 @@
+#! /bin/sh
+
+# auto run
+
+sxhkd &
+nitrogen --restore &
+picom --config /home/yasushi/.config/picom/picom.conf &
+ulauncher --hide-window --no-window-shadow &
+blueman-tray &
+
+/home/yasushi/.config/polybar/launch.sh
+
+# monitor control
+
+bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 
+bspc monitor HDMI2 -d 1 2 3 4 5 6 7 8 9
+
+# other configs
+bspc config border_width         2
+bspc config window_gap          2
+
+bspc config split_ratio          0.52
+bspc config focused_border_color "#EBCB8B"
+bspc config normal_border_color "#D8DEE9"
+bspc config borderless_monocle   false
+bspc config gapless_monocle      false
+bspc config -m HDMI2 bottom_padding 0
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a ulauncher focus=on
+bspc rule -a polybar border=off manage=off
+bspc rule -a Emacs state=tiled 

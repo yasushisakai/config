@@ -1,0 +1,41 @@
+# use msmtp for sending
+set sendmail = "/usr/bin/msmtp -a medialab"
+set use_from = yes
+set from =  "yasushis@media.mit.edu"
+
+## appearance
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set charset = "utf-8"
+color status black cyan
+
+## for reading emails, read from local
+# needs to be consistent with mbsync
+set mbox_type = Maildir
+set folder = ~/mail/medialab
+# folder in which to start mutt
+set spoolfile = +/INBOX/
+# cache for even faster
+set header_cache = ~/mail/medialab/cache
+
+set record = "+/[Gmail].Sent_Mail"
+set trash = "+/[Gmail].Trash"
+set postponed = "+/[Gmail].Drafts"
+
+bind editor <Space> noop
+# bind index <Space> noop # is already bound in muttrc
+macro index,pager y "<save-message>=[Gmail].All_Mail<enter><enter>" "Archive"
+macro index <Space>i "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index <Space>d "<change-folder>=[Gmail].Drafts<enter>" "Go to drafts"
+macro index <Space>t "<change-folder>=[Gmail].Trash<enter>" "Go to drafts"
+macro index <Space>s "<change-folder>=[Gmail].Sent_Mail<enter>" "Go to drafts"
+
+# sidebar inboxes
+# fist clear mailboxes
+unmailboxes *
+# then readd them
+named-mailboxes "inbox" "+/INBOX"
+named-mailboxes "archive" "+/[Gmail].All_Mail"
+named-mailboxes "drafts" $postponed
+named-mailboxes "sent" $record
+named-mailboxes "trash" $trash

@@ -1,0 +1,42 @@
+{
+    "e7ec48eb-aab1-499a-bd43-589c869dc81a": {
+        "id": "e7ec48eb-aab1-499a-bd43-589c869dc81a",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1632437032.6993814
+    },
+    "f0a60db2-d691-465f-9e24-5cba660b9ff6": {
+        "id": "f0a60db2-d691-465f-9e24-5cba660b9ff6",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1632437032.699441
+    },
+    "0ca3d1fe-c989-4b55-a3c8-5c53d8023356": {
+        "id": "0ca3d1fe-c989-4b55-a3c8-5c53d8023356",
+        "name": "duckduckgo",
+        "keyword": "s",
+        "cmd": "https://duckduckgo.com/?q=%s",
+        "icon": null,
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1632537655.2572467
+    },
+    "4af2590b-8da2-4816-847a-0486433f6b76": {
+        "id": "4af2590b-8da2-4816-847a-0486433f6b76",
+        "name": "emacsclient",
+        "keyword": "ema",
+        "cmd": "emacsclient -c",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1633363028.9517162
+    }
+}

@@ -1,0 +1,54 @@
+# use msmtp for sending
+set sendmail = "/usr/bin/msmtp -a fastmail"
+set use_from = yes
+set from = "mail@yasushisakai.com"
+
+## appearance
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set charset = "utf-8"
+color status black brightyellow
+
+## for reading emails, read from local
+set mbox_type = Maildir
+set folder = ~/mail/fastmail
+# folder in which to start mutt ! not the INBOX but my human mailbox
+set spoolfile = +/yasushi/
+# cache for even faster
+set header_cache = ~/mail/fastmail/cache
+
+set inbox = "+/INBOX"
+set record = "+/Sent"
+set trash = "+/Trash"
+set postponed = "+/Drafts"
+
+# move mail to...
+# archive (save mail)
+# macro index y ';<save-message>!Archive<tab><enter><enter>' "Move message to Archive"
+# trash
+# macro index,pager d 's!Trash<enter><enter>' "Move message to Trash"
+
+## emulating google web client
+bind editor <space> noop
+# macro index,pager y "<save-message>=Archive<enter><enter>" "Archive"
+macro index,pager y ';<save-message>!Archive<tab><enter><enter>' "Move message to Archive"
+macro index,pager d "<save-message>=Trash<enter><enter>" "Trash"
+macro index <Space>i "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index <Space>a "<change-folder>=Archive<enter>" "Go to archive"
+macro index <Space>d "<change-folder>=Drafts<enter>" "Go to drafts"
+macro index <Space>y "<change-folder>=yasushi<enter>" "Go to yasushi folder"
+macro index <Space>u "<change-folder>=accounts<enter>" "Go to accounts"
+macro index <Space>i "<change-folder>=yasushi.accounts<enter>" "Go to yasushi accounts folder"
+macro index <Space>s "<change-folder>=Sent<enter>" "Go to sent"
+macro index <Space>t "<change-folder>=Trash<enter>" "Go to trash"
+
+# sidebar inboxes
+unmailboxes *
+named-mailboxes "inbox" $inbox
+named-mailboxes "accounts" "+/accounts"
+named-mailboxes "yasushi" "+/yasushi"
+named-mailboxes "yasushi(accounts)" "+/yasushi.accounts"
+named-mailboxes "archive" "+/Archive"
+named-mailboxes "drafts" $postponed
+named-mailboxes "sent" $record
+named-mailboxes "trash" $trash

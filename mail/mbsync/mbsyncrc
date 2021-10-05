@@ -1,0 +1,141 @@
+IMAPAccount fastmail
+Host imap.fastmail.com
+User sakai@fastmail.com
+PassCmd "pass non-interactive/fastmail.com"
+SSLType IMAPS
+SSLVersions TLSv1.2
+
+# REMOTE STORAGE
+IMAPStore fastmail-remote
+Account fastmail
+
+# LOCAL STORAGE
+MailDirStore fastmail-local
+Path ~/mail/fastmail/
+Inbox ~/mail/fastmail/INBOX
+
+# Channels are connections between the local and remote
+Channel fastmail-inbox
+Far :fastmail-remote:
+Near :fastmail-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+CopyArrivalDate yes
+SyncState *
+
+Channel fastmail-trash
+Far :fastmail-remote:"Trash"
+Near :fastmail-local:Trash
+Create Both
+Expunge Both
+SyncState *
+
+Channel fastmail-sent
+Far :fastmail-remote:"Sent"
+Near :fastmail-local:Sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel fastmail-archive
+Far :fastmail-remote:"Archive"
+Near :fastmail-local:Archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel fastmail-drafts
+Far :fastmail-remote:"Drafts"
+Near :fastmail-local:Drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel fastmail-yasushi
+Far :fastmail-remote:"yasushi"
+Near :fastmail-local:yasushi
+Create Both
+Expunge Both
+SyncState *
+
+Channel fastmail-yasushi-accounts
+Far :fastmail-remote:"yasushi.accounts"
+Near :fastmail-local:yasushi.accounts
+Create Both
+Expunge Both
+SyncState *
+
+Channel fastmail-accounts
+Far :fastmail-remote:"accounts"
+Near :fastmail-local:accounts
+Create Both
+Expunge Both
+SyncState *
+
+
+Group fastmail
+Channel fastmail-inbox
+Channel fastmail-trash
+Channel fastmail-sent
+Channel fastmail-drafts
+Channel fastmail-archive
+Channel fastmail-yasushi
+Channel fastmail-yasushi-accounts
+Channel fastmail-accounts
+
+##############################################################################
+
+IMAPAccount medialab
+Host imap.gmail.com
+User yasushis@media.mit.edu
+PassCmd "pass non-interactive/medialab-mail"
+AuthMechs LOGIN
+SSLType IMAPS
+SSLVersion TLSv1.2
+# CertificateFile /opt/local/share/curl/curl-ca-bundle.crt
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# REMOTE STORAGE 
+IMAPStore medialab-remote
+Account medialab
+
+# LOCAL STORAGE 
+MaildirStore medialab-local
+Path ~/mail/medialab/
+Inbox ~/mail/medialab/INBOX
+
+Channel medialab-inbox
+Far :medialab-remote:
+Near :medialab-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel medialab-trash
+Far :medialab-remote:"[Gmail]/Trash"
+Near :medialab-local:"[Gmail].Trash"
+Create Both
+Expunge Both
+SyncState *
+
+Channel medialab-sent
+Far :medialab-remote:"[Gmail]/Sent Mail"
+Near :medialab-local:"[Gmail].Sent_Mail"
+Create Both
+Expunge Both
+SyncState *
+
+Channel medialab-all
+Far :medialab-remote:"[Gmail]/All Mail"
+Near :medialab-local:"[Gmail].All_Mail"
+Create Both
+Expunge Both
+SyncState *
+
+Group medialab
+Channel medialab-inbox
+Channel medialab-sent
+Channel medialab-trash
+Channel medialab-all
