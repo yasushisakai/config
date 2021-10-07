@@ -56,9 +56,9 @@ macro index L "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuc
 macro index a "<limit>all\n" "show all messages (undo limit)"
 
 # sidebar
-bind index,pager \Cj sidebar-next
-bind index,pager \Ck sidebar-prev
-bind index,pager \Co sidebar-open
+# circulate through
+macro index,pager \Cj "<sidebar-next><sidebar-open>"
+macro index,pager \Ck "<sidebar-prev><sidebar-open>"
 bind index,pager <Space>b sidebar-toggle-visible
 
 ######################################

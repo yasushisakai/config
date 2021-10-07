@@ -23,6 +23,7 @@ force_rm .bash_profile
 force_rm .bashrc
 force_rm_dir .doom.d
 force_rm .gitconfig
+force_rm .gitignore
 force_rm .mbsyncrc
 force_rm .notmuch-config
 force_rm .profile
@@ -39,5 +40,6 @@ force_rm_dir .config/polybar
 force_rm_dir .config/sxhkd
 force_rm_dir .config/checkmail
 force_rm_dir .config/systemd
+force_rm_dir .config/nvim
 
 

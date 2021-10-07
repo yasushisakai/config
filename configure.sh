@@ -17,6 +17,7 @@ symlink shell/bash_profile .bash_profile
 symlink shell/bashrc .bashrc
 symlink doom.d .doom.d
 symlink git/gitconfig .gitconfig
+symlink git/gitignore_global .gitignore_global
 symlink mail/mbsync/mbsyncrc .mbsyncrc
 symlink mail/notmuch-config .notmuch-config
 symlink shell/profile .profile
@@ -33,6 +34,7 @@ symlink polybar .config/polybar
 symlink sxhkd .config/sxhkd
 symlink mail/checkmail .config/checkmail
 symlink systemd .config/systemd 
+symlink nvim .config/nvim
 
 
 
