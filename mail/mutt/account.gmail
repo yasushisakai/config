@@ -36,6 +36,7 @@ unmailboxes *
 # then readd them
 named-mailboxes "inbox" "+/INBOX"
 named-mailboxes "archive" "+/[Gmail].All_Mail"
-named-mailboxes "drafts" $postponed
-named-mailboxes "sent" $record
-named-mailboxes "trash" $trash
+# we need to mkdir first?
+named-mailboxes "drafts" "+/[Gmail].Drafts"
+named-mailboxes "sent" "+/[Gmail].Sent_Mail"
+named-mailboxes "trash" "+/[Gmail].Trash"
