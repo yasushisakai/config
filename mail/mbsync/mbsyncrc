@@ -93,8 +93,7 @@ PassCmd "pass non-interactive/medialab-mail"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersion TLSv1.2
-# do `brew info openssl@1.1`(change version accordingly) to see where the certs are saved..
-CertificateFile /opt/homebrew/etc/openssl@1.1/cert.pem
+CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 
 # REMOTE STORAGE 
