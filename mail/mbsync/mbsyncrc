@@ -93,8 +93,9 @@ PassCmd "pass non-interactive/medialab-mail"
 AuthMechs LOGIN
 SSLType IMAPS
 SSLVersion TLSv1.2
-# CertificateFile /opt/local/share/curl/curl-ca-bundle.crt
-CertificateFile /etc/ssl/certs/ca-certificates.crt
+# do `brew info openssl@1.1`(change version accordingly) to see where the certs are saved..
+CertificateFile /opt/homebrew/etc/openssl@1.1/cert.pem
+
 
 # REMOTE STORAGE 
 IMAPStore medialab-remote
@@ -127,6 +128,13 @@ Create Both
 Expunge Both
 SyncState *
 
+Channel medialab-draft
+Far :medialab-remote:"[Gmail]/Drafts"
+Near :medialab-local:"[Gmail].Drafts"
+Create Both
+Expunge Both
+SyncState *
+
 Channel medialab-all
 Far :medialab-remote:"[Gmail]/All Mail"
 Near :medialab-local:"[Gmail].All_Mail"
@@ -138,4 +146,5 @@ Group medialab
 Channel medialab-inbox
 Channel medialab-sent
 Channel medialab-trash
+Channel medialab-draft
 Channel medialab-all

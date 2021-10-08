@@ -14,10 +14,10 @@ set wrap=80
 bind index,pager g group-reply
 
 ## aliases
-source /home/yasushi/.config/mutt/aliases
-set alias_file=/home/yasushi/.config/mutt/aliases
+source $HOME/.config/mutt/aliases
+set alias_file=$HOME/.config/mutt/aliases
 # auto adds 
-set display_filter=/home/yasushi/.config/mutt/autoadd_alias.sh
+set display_filter=$HOME/.config/mutt/autoadd_alias.sh
 
 ## attempt to view html
 auto_view text/html                                      # view html automatically
@@ -35,9 +35,9 @@ set mail_check_stats
 #### switch accounts
 # shift + w goes to work
 bind index,pager <Space> noop
-macro index <Space>w '<sync-mailbox><enter-command>source /home/yasushi/.config/mutt/account.gmail<enter><change-folder>!<enter>'
+macro index <Space>w '<sync-mailbox><enter-command>source $HOME/.config/mutt/account.gmail<enter><change-folder>!<enter>'
 # shift + p changes to private
-macro index <Space>p '<sync-mailbox><enter-command>source /home/yasushi/.config/mutt/account.fastmail<enter><change-folder>!<enter>'
+macro index <Space>p '<sync-mailbox><enter-command>source $HOME/.config/mutt/account.fastmail<enter><change-folder>!<enter>'
 
 macro index G "!mbsync -a^M" "update through mbsync"
 set pipe_decode=yes
@@ -73,4 +73,4 @@ color body red default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 color body red default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
 
 # use account.gmail as default
-source "/home/yasushi/.config/mutt/account.gmail"
+source "$HOME/.config/mutt/account.gmail"
