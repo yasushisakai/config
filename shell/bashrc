@@ -24,7 +24,3 @@ set -o vi
 
 # purge mail
 alias purgemail='notmuch search --output=files tag:deleted | xargs -l rm'
-
-# fuzzy find
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
