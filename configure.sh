@@ -11,27 +11,23 @@ symlink() {
 	ln -s $BASEDIR/$1 $HOME/$2
 }
 
-symlink shell/bash_history .bash_history
 symlink shell/bash_logout .bash_logout
 symlink shell/bash_profile .bash_profile
 symlink shell/bashrc .bashrc
-symlink doom.d .doom.d
 symlink git/gitconfig .gitconfig
 symlink git/gitignore_global .gitignore_global
 symlink mail/mbsync/mbsyncrc .mbsyncrc
 symlink mail/notmuch-config .notmuch-config
 symlink shell/profile .profile
-symlink xinitrc .xinitrc
-symlink Xmodmap .Xmodmap
 
-symlink alacritty .config/alacritty
-symlink ulauncher .config/ulauncher
-symlink picom .config/picom
-symlink bspwm .config/bspwm
 symlink mail/mutt .config/mutt
 symlink mail/msmtp .config/msmtp
-symlink polybar .config/polybar
-symlink sxhkd .config/sxhkd
 symlink mail/checkmail .config/checkmail
-symlink systemd .config/systemd 
 symlink nvim .config/nvim
+symlink tmux .config/tmux
+symlink doom.d .doom.d
+
+# services
+symlink systemd/user/emacs.service .config/systemd/user/emacs.service
+symlink systemd/user/mbsync.service .config/systemd/user/mbsync.service
+symlink systemd/user/mbsync.timer .config/systemd/user/mbsync.timer
