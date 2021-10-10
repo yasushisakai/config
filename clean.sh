@@ -18,8 +18,10 @@ force_rm() {
 }
 
 force_rm .gitconfig
-force_rm .gitignore
+force_rm .gitignore_global
 force_rm .mbsyncrc
+force_rm Library/LaunchAgents/mbsync.plist
+force_rm .notmuch-config
 force_rm .profile
 
 force_rm_dir .config/mutt

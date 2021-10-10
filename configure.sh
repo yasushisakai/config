@@ -14,6 +14,7 @@ symlink() {
 symlink git/gitconfig .gitconfig
 symlink git/gitignore_global .gitignore_global
 symlink mail/mbsync/mbsyncrc .mbsyncrc
+symlink mail/mbsync/mbsync.plist Library/LaunchAgents/mbsync.plist
 symlink mail/notmuch-config .notmuch-config
 symlink shell/profile .profile
 
