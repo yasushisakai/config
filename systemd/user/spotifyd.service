@@ -7,7 +7,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/spotifyd --no-daemon -u "yasushis@media.mit.edu" -P "pass music/spotify"
+ExecStart=/usr/bin/spotifyd --no-daemon -u "yasushis@media.mit.edu" -P "pass non-interactive/spotify"
 Restart=always
 RestartSec=12
 
