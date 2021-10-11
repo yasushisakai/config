@@ -18,9 +18,5 @@ alias rm='rm -i'
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
-# vim mode + jk changes to normal mode 
-bind '"jk":vi-movement-mode'
-set -o vi
-
 # purge mail
 alias purgemail='notmuch search --output=files tag:deleted | xargs -l rm'
