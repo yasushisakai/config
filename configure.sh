@@ -26,6 +26,7 @@ symlink mail/checkmail .config/checkmail
 symlink nvim .config/nvim
 symlink tmux .config/tmux
 symlink doom.d .doom.d
+symlink org-templates .config/org-templates
 
 # services
 symlink systemd/user/emacs.service .config/systemd/user/emacs.service

@@ -1,0 +1,57 @@
+#+LATEX_CLASS_OPTIONS: [12pt,t,aspectratio=169]
+#+BEAMER_THEME: default
+#+LATEX_HEADER: \usepackage{graphicx}
+
+#+LATEX_HEADER: \setbeameroption{hide notes}
+#+LATEX_HEADER: \setbeamertemplate{note page}[plain]
+#+LATEX_HEADER:
+#+LATEX_HEADER: \usetheme{default}
+#+LATEX_HEADER: \beamertemplatenavigationsymbolsempty
+#+LATEX_HEADER: \hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+#+LATEX_HEADER:
+#+LATEX_HEADER: \usefonttheme{professionalfonts}
+#+LATEX_HEADER: \usefonttheme{serif}
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setbeamerfont{note page}{family*=pplx,size=\footnotesize} % Palatino for notes
+#+LATEX_HEADER: \setbeamerfont{frame title}{series=\bfseries}
+#+LATEX_HEADER: \setmonofont{HackGen35Nerd}
+#+LATEX_HEADER: \usepackage{fancyvrb}
+#+LATEX_HEADER: \fvset{fontsize=\scriptsize}
+#+LATEX_HEADER: \fvset{frame=single}
+#+LATEX_HEADER: \fvset{framesep=2mm}
+#+LATEX_HEADER: \RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
+#+LATEX_HEADER: \definecolor{foreground}{RGB}{236,239,244}
+#+LATEX_HEADER: \definecolor{background}{RGB}{46,52,64}
+#+LATEX_HEADER: \definecolor{title}{RGB}{136,192,208}
+#+LATEX_HEADER: \definecolor{gray}{RGB}{216,222,233}
+#+LATEX_HEADER: \definecolor{subtitle}{RGB}{235,203,139}
+#+LATEX_HEADER: \definecolor{hilight}{RGB}{235,203,139}
+#+LATEX_HEADER: \definecolor{vhilight}{RGB}{191,97,106}
+#+LATEX_HEADER: \setbeamercolor{titlelike}{fg=title}
+#+LATEX_HEADER: \setbeamercolor{subtitle}{fg=subtitle}
+#+LATEX_HEADER: \setbeamercolor{institute}{fg=gray}
+#+LATEX_HEADER: \setbeamercolor{normal text}{fg=foreground,bg=background}
+#+LATEX_HEADER: \setbeamertemplate{frametitle}{\color{title}\bfseries\insertframetitle\par\vskip-6pt\hrulefill}
+
+#+LATEX_HEADER: \setbeamercolor{block title}{fg=subtitle,bg=background}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \setbeamercolor{item}{fg=foreground} % color of bullets
+#+LATEX_HEADER: \setbeamercolor{subitem}{fg=gray}
+#+LATEX_HEADER: \setbeamercolor{itemize/enumerate subbody}{fg=gray}
+#+LATEX_HEADER: \setbeamertemplate{itemize subitem}{{\textendash}}
+#+LATEX_HEADER: \setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+#+LATEX_HEADER: \setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+#+LATEX_HEADER: \setbeamerfont{title}{series=\bfseries}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \setbeamertemplate{footline}{%
+#+LATEX_HEADER:     \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+#+LATEX_HEADER:           \scriptsize\insertframenumber}}}\hspace*{5pt}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newcommand{\bi}{\begin{itemize}}
+#+LATEX_HEADER: \newcommand{\ei}{\end{itemize}}
+#+LATEX_HEADER: \newcommand{\ig}{\includegraphics}
+#+LATEX_HEADER: \newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
+#+OPTIONS: toc:nil
+#+BEAMER_FRAME_LEVEL: 3

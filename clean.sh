@@ -32,6 +32,7 @@ force_rm_dir .config/msmtp
 force_rm_dir .config/checkmail
 force_rm_dir .config/nvim
 force_rm_dir .config/tmux
+force_rm_dir .config/org-templates
 
 # services
 force_rm .config/systemd/user/emacs.service 

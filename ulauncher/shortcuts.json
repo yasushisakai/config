@@ -28,15 +28,5 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1632537655.2572467
-    },
-    "4af2590b-8da2-4816-847a-0486433f6b76": {
-        "id": "4af2590b-8da2-4816-847a-0486433f6b76",
-        "name": "emacsclient",
-        "keyword": "ema",
-        "cmd": "emacsclient -c",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1633363028.9517162
     }
 }
