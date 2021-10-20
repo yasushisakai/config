@@ -42,8 +42,6 @@
 ")
 :unnarrowed t)))
 
-
-
 ;; citation
 (setq bibtex-actions-bibliography '("~/Dropbox/bib/main.bib"))
 

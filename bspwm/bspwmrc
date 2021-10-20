@@ -5,7 +5,6 @@
 # set trackpad to clickfinger (context click is two finger)
 xinput set-prop "Elan Touchpad" "libinput Click Method Enabled" 0 1
 
-
 sxhkd &
 nitrogen --restore &
 picom --config /home/yasushi/.config/picom/picom.conf &

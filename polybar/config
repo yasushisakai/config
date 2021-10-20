@@ -45,7 +45,8 @@ module-margin-right = 2
 font-0 = "HackGen35Nerd Console:pixelsize=11;2"
 font-1 = "FontAwsome":pixelsize=11;2"
 
-modules-left = bspwm mail
+; modules-left = bspwm mail
+modules-left = bspwm
 modules-center = 
 modules-right = xbacklight pulseaudio cpu memory filesystem wlan battery date
 
@@ -92,10 +93,10 @@ cursor-scroll = ns-resize
 
 bottom = true
 
-[module/mail]
-type=custom/script
-exec=$HOME/code/checkmail/target/release/checkmail
-interval=10
+;[module/mail]
+;type=custom/script
+;exec=$HOME/code/checkmail/target/release/checkmail
+;interval=10
 
 
 [module/filesystem]
