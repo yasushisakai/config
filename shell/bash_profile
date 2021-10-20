@@ -7,9 +7,6 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 startx
 fi
 
-# bit warden session key
-export BW_SESSION="/aDxi7bH8JHL/93nWHwsQurBWMAiiA97o/HF5M464+sJ4vb9VdHHcdhyPOjhf0K4MdMGgxTqbGEHgINnS1CFZQ=="
-
 HISTIGNORE='ll*:la*:cd*:ls:clear:mutt'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
