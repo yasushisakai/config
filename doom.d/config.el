@@ -10,6 +10,10 @@
 (setq doom-font (font-spec :family "HackGen35Nerd Console" :size 14)
       doom-variable-pitch-font (font-spec :family "Noto Sans CJK JP" :size 15 :weight 'semi-light))
 
+;; dictionary for ddskk
+(setq skk-large-jisyo "/usr/share/skk/SKK-JISYO.L")
+(setq default-input-method "japanese-skk")
+
 (setq doom-theme 'doom-nord)
 
 (setq display-line-numbers-type t)
