@@ -12,9 +12,11 @@ Plug 'neovim/nvim-lspconfig'
 
 " we need a completion engine
 Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/vim-vsnip' " and a snippet engine
 
 " we need this engine to work with neovims lsp
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-vsnip'
 " we also want to autocomplete within buffers and file paths
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
@@ -22,8 +24,10 @@ Plug 'hrsh7th/cmp-buffer'
 " rust
 Plug 'simrat39/rust-tools.nvim'
 
-" fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+
+" fuzzy finder
 Plug 'nvim-telescope/telescope.nvim'
 
 " root dir is project root
@@ -81,9 +85,27 @@ lua <<EOF
 local cmp = require'cmp'
 
 cmp.setup({
+	snippet = {
+		expand = function(args)
+			vim.fn["vsnip#anonymous"](args.body)
+		end
+	},
 	mapping = {
-		['<S-Tab>'] = cmp.mapping.select_prev_item(),
-		['<Tab>'] = cmp.mapping.select_next_item(),
+		['<S-Tab>'] = 
+		function(fallback) 
+			if cmp.visible() then
+				cmp.select_prev_item()
+			else
+				fallback()
+			end
+		end,
+		['<Tab>'] = function(fallback)
+		if cmp.visible() then
+			cmp.select_next_item()
+		else
+			fallback()
+		end
+		end,
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.close(),
 		['<CR>'] = cmp.mapping.confirm({
@@ -94,6 +116,7 @@ cmp.setup({
 
 	sources = {
 		{ name = 'nvim_lsp' },
+		{ name = 'vsnip' },
 		{ name = 'path' },
 		{ name = 'buffer' }
 	}
@@ -113,6 +136,7 @@ set hidden
 set splitright
 set splitbelow
 set mouse=a
+set number
 
 " file for undo
 set undodir=~/.vimdid
@@ -135,7 +159,7 @@ nnoremap <silent> [g <cmd>lua vim.lsp.buf.diagnostic.goto_prev()<cr>
 nnoremap <silent> ]g <cmd>lua vim.lsp.buf.diagnostic.goto_next()<cr>
 nnoremap <silent> gf <cmd>lua vim.lsp.buf.formatting()<cr>
 
-au CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics()
+au CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})
 
 nnoremap <leader>m <cmd>lua vim.lsp.buf.rename()<cr>
 

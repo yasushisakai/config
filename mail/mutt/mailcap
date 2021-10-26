@@ -9,5 +9,5 @@ image/png; $HOME/.config/mutt/view_attachment.sh %s png /usr/bin/firefox
 image/gif; $HOME/.config/mutt/view_attachment.sh %s gif /usr/bin/firefox
 
 # PDF
-application/pdf; /Users/yasushi/.config/mutt/view_attachment.sh %s pdf /usr/bin/firefox
+application/pdf; $HOME/.config/mutt/view_attachment.sh %s pdf /usr/bin/firefox
 

@@ -34,17 +34,21 @@
 (setq org-roam-capture-templates '(
 ("d" "default" plain "%?" :target
   (file+head "${slug}.org" "#+title: ${title}
-,#+date: %<%Y-%m-%d %H:%M>
+#+date: %<%Y-%m-%d %H:%M>
 :DRAWER:
-,#+LATEX_CLASS: jsarticle
-,#+LATEX_HEADER: \\newcommand{\\headauthor}{Yasushi Sakai}
-,#+LATEX_HEADER: \\newcommand{\\headtitle}{${title}}
-,#+SETUPFILE: ~/.config/org-templates/setup.org
-,#+FILETAGS: :draft:
-,#+OPTIONS: title:nil
+#+LATEX_CLASS: jsarticle
+#+LATEX_HEADER: \\newcommand{\\headauthor}{Yasushi Sakai}
+#+LATEX_HEADER: \\newcommand{\\headtitle}{${title}}
+#+SETUPFILE: ~/.config/org-templates/setup.org
+#+FILETAGS: :draft:
+#+OPTIONS: title:nil
 :END:
 ")
 :unnarrowed t)))
+
+(use-package! mixed-pitch
+    :hook
+  (text-mode . mixed-pitch-mode))
 
 ;; citation
 (setq bibtex-actions-bibliography '("~/Dropbox/bib/main.bib"))
