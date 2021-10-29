@@ -1,14 +1,14 @@
-# text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
 # text/html; links -dump %s ; nametemplate=%s.html ; copiousoutput           
-text/html; pandoc -f html -t markdown; copiousoutput; compose=vim %s
+# text/html; pandoc -f html -t markdown; copiousoutput; compose=vim %s
 
 # Images
-image/jpeg; $HOME/.config/mutt/view_attachment.sh %s jpeg /usr/bin/firefox
-image/jpg; $HOME/.config/mutt/view_attachment.sh %s jpg /usr/bin/firefox
-image/pjpeg; $HOME/.config/mutt/view_attachment.sh %s pjpeg /usr/bin/firefox
-image/png; $HOME/.config/mutt/view_attachment.sh %s png /usr/bin/firefox
-image/gif; $HOME/.config/mutt/view_attachment.sh %s gif /usr/bin/firefox
+image/jpeg; $HOME/.config/mutt/view_attachment.sh %s jpeg /System/Applications/Preview.app
+image/jpg; $HOME/.config/mutt/view_attachment.sh %s jpg /System/Applications/Preview.app
+image/pjpeg; $HOME/.config/mutt/view_attachment.sh %s pjpeg /System/Applications/Preview.app
+image/png; $HOME/.config/mutt/view_attachment.sh %s png /System/Applications/Preview.app
+image/gif; $HOME/.config/mutt/view_attachment.sh %s gif /System/Applications/Preview.app
 
 # PDF
-application/pdf; /Users/yasushi/.config/mutt/view_attachment.sh %s pdf /usr/bin/firefox
+application/pdf; $HOME/.config/mutt/view_attachment.sh %s pdf /System/Applications/Preview.app
 

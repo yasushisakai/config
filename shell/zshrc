@@ -1,0 +1,21 @@
+#
+# ~/.zshrc
+#
+
+export EDITOR=/opt/homebrew/bin/nvim
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+
+PROMPT='%B%F{blue}%1~%f%b %(?.%F{green}.%F{red})%f '
+
+alias ls='ls --color=auto'
+alias vim=nvim
+alias mutt=neomutt
+# remove files interactively
+alias rm='rm -i'
+
+# add cargo and rust stuff to path
+. "$HOME/.cargo/env"
+

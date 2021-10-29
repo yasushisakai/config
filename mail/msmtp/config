@@ -1,7 +1,9 @@
 defaults
 auth  on
 tls   on
-tls_trust_file /etc/ssl/certs/ca-certificates.crt
+# tls_trust_file /etc/ssl/certs/ca-certificates.crt
+tls_trust_file /opt/homebrew/Cellar/ca-certificates/2021-10-26/share/ca-certificates/cacert.pem
+
 logfile  ~/.config/msmtp/msmtp.log
 
 # media lab

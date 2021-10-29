@@ -1,5 +1,5 @@
 # use msmtp for sending
-set sendmail = "/usr/bin/msmtp -a fastmail"
+set sendmail = "msmtp -a fastmail"
 set use_from = yes
 set from = "mail@yasushisakai.com"
 

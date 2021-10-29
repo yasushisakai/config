@@ -1,5 +1,5 @@
 # use msmtp for sending
-set sendmail = "/usr/bin/msmtp -a medialab"
+set sendmail = "msmtp -a medialab"
 set use_from = yes
 set from =  "yasushis@media.mit.edu"
 
