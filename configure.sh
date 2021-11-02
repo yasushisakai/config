@@ -36,3 +36,4 @@ symlink mail/checkmail .config/checkmail
 symlink systemd .config/systemd 
 symlink nvim .config/nvim
 symlink org-templates .config/org-templates
+symlink lf .config/lf

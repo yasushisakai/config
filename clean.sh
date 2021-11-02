@@ -42,3 +42,5 @@ force_rm_dir .config/checkmail
 force_rm_dir .config/systemd
 force_rm_dir .config/nvim
 force_rm_dir .config/org-templates
+force_rm_dir .config/lf
+
