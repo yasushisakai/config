@@ -1,0 +1,41 @@
+set hidden true
+set color256 true
+set drawbox true
+set ignorecase true
+
+
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+cmd mkdir %printf "dir name: " && read ans && mkdir $ans && echo ""
+
+cmd mkfile ${{
+printf "file name: "
+read ans
+$EDITOR $ans
+}}
+
+cmd remove % rm %f
+
+map m
+map md mkdir
+map mf mkfile
+map r rename
+map <enter> open
+map y copy
+map x cut
+map p paste
+map DD delete
+map i $~/.config/lf/pv.sh $f | bat -R
+
+map g
+map gc cd ~/code
+map gd cd ~/Dropbox
+map go cd ~/Dropbox/org
+
+
+

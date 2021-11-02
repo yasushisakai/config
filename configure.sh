@@ -24,4 +24,4 @@ symlink mail/mutt .config/mutt
 symlink mail/msmtp .config/msmtp
 symlink nvim .config/nvim
 symlink doom.d .doom.d
-
+symlink lf .config/lf

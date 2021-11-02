@@ -35,4 +35,6 @@ force_rm .zshenv
 force_rm_dir .config/mutt
 force_rm_dir .config/msmtp
 force_rm_dir .config/nvim
+force_rm_dir .config/lf
+
 
