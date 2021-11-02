@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>mbsync</string>
+    <string>com.yasushi.mbsync</string>
     <key>ProgramArguments</key>
     <array>
         <string>mbsync</string>

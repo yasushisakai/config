@@ -4,5 +4,5 @@
 
 [core]
 	editor = nvim
-	excludesfile = $HOME/git/gitignore_global
+	excludesfile = $HOME/.gitignore_global
 
