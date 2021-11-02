@@ -145,6 +145,8 @@ set undofile
 """"""""""""""""""""""""""""""""""""""""""""
 " key bindings
 let mapleader = "\<Space>"
+map ; :
+noremap ;; ;
 inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
