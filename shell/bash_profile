@@ -11,3 +11,6 @@ HISTIGNORE='ll*:la*:cd*:ls:clear:mutt'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 . "$HOME/.cargo/env"
+
+# add doom binary to PATH
+PATH=$PATH:$HOME/.emacs.d/bin

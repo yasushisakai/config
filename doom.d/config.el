@@ -7,8 +7,8 @@
 (setq frame-resize-pixelwise t)
 
 ;; Appearances
-(setq doom-font (font-spec :family "HackGen35Nerd Console" :size 17)
-      doom-variable-pitch-font (font-spec :family "Noto Sans CJK JP" :size 15 :weight 'semi-light))
+(setq doom-font (font-spec :family "HackGen35Nerd Console" :size 20)
+      doom-variable-pitch-font (font-spec :family "Noto Sans CJK JP" :size 21 :weight 'semi-light))
 
 (setq doom-theme 'doom-nord)
 
