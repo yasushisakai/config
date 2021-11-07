@@ -28,5 +28,15 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1632537655.2572467
+    },
+    "c1c3ead5-838b-4508-b2e9-fdf271aaa65d": {
+        "id": "c1c3ead5-838b-4508-b2e9-fdf271aaa65d",
+        "name": "emacs",
+        "keyword": "emacs",
+        "cmd": "emacsclient -c",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1636250709.2043147
     }
 }

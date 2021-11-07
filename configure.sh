@@ -23,6 +23,7 @@ symlink mail/notmuch-config .notmuch-config
 symlink shell/profile .profile
 symlink xinitrc .xinitrc
 symlink Xmodmap .Xmodmap
+symlink pam_environment .pam_environment
 
 symlink alacritty .config/alacritty
 symlink ulauncher .config/ulauncher

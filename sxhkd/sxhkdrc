@@ -58,10 +58,10 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	xbacklight -dec 5
 
-XF86Display
+super + l
 	arandr
 	
-XF86Favorites
+XF86AudioMedia
 	firefox
 
 #
