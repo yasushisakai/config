@@ -26,10 +26,10 @@ force_rm .gitconfig
 force_rm .gitignore_global
 force_rm .mbsyncrc
 force_rm .notmuch-config
-force_rm .profile
 force_rm .xinitrc
 force_rm .Xmodmap
 force_rm .pam_environment
+force_rm .latexmkrc
 
 force_rm_dir .config/alacritty
 force_rm_dir .config/ulauncher

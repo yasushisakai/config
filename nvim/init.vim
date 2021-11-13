@@ -142,6 +142,9 @@ set number
 set undodir=~/.vimdid
 set undofile
 
+" set guifont=HackGenNerd:h10
+set guifont=HackGenNerd:h18
+
 """"""""""""""""""""""""""""""""""""""""""""
 " key bindings
 let mapleader = "\<Space>"
@@ -150,6 +153,11 @@ noremap ;; ;
 inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
+
+" Very magic by default
+nnoremap ? ?\v
+nnoremap / /\v
+cnoremap %s/ %sm/
 
 " code navigation
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<cr>
@@ -237,3 +245,12 @@ EOF
 
 let g:nord_contrast = v:true
 let g:nord_borders = v:true
+
+
+" nvui
+if exists('g:nvui')
+  " Configure nvui
+  NvuiCmdFontFamily HackGenNerd
+  NvuiCmdFontSize 30
+  NvuiScrollAnimationDuration 0.2
+endif

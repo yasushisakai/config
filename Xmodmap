@@ -5,5 +5,3 @@ keysym Control_R = Caps_Lock
 keysym Caps_Lock = Control_R
 add Lock = Caps_Lock
 add Control = Control_R
-
-! 107 = scrot

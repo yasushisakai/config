@@ -38,5 +38,25 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1636250709.2043147
+    },
+    "88c3a51d-3bac-4102-a5c7-fdc1b3925496": {
+        "id": "88c3a51d-3bac-4102-a5c7-fdc1b3925496",
+        "name": "shutdown",
+        "keyword": "shutdown",
+        "cmd": "sudo shutodown -h now",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1636600897.1239061
+    },
+    "2c138e88-606e-4f4a-ab6d-c9ae6fbfd736": {
+        "id": "2c138e88-606e-4f4a-ab6d-c9ae6fbfd736",
+        "name": "reboot",
+        "keyword": "reboot",
+        "cmd": "sudo reboot\n",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1636600910.1189125
     }
 }

@@ -1,4 +1,6 @@
 #+OPTIONS: toc:nil
+#+OPTIONS: title:nil
+#+LATEX_HEADER: \newcommand{\headauthor}{Yasushi Sakai}
 #+LATEX_CLASS_OPTIONS: [11pt,letterpaper, notitlepage, dvipdfmx]
 
 #+LATEX_HEADER: \usepackage{lmodern}

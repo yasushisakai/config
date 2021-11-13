@@ -20,10 +20,10 @@ symlink git/gitconfig .gitconfig
 symlink git/gitignore_global .gitignore_global
 symlink mail/mbsync/mbsyncrc .mbsyncrc
 symlink mail/notmuch-config .notmuch-config
-symlink shell/profile .profile
 symlink xinitrc .xinitrc
 symlink Xmodmap .Xmodmap
 symlink pam_environment .pam_environment
+symlink latexmkrc .latexmkrc
 
 symlink alacritty .config/alacritty
 symlink ulauncher .config/ulauncher

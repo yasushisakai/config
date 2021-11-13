@@ -84,7 +84,7 @@
        grammar           ; tasing grammar mistake every you make
 
        :tools
-       ;;biblio ; disabling this since bibtex-action was renamed
+       biblio ; disabling this since bibtex-action was renamed
        ;;ansible
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv

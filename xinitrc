@@ -12,9 +12,6 @@ if [ -f $sysresources ]; then
 
 
 
-
-
-
     xrdb -merge $sysresources
 
 fi
@@ -24,10 +21,6 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
 
 
 
