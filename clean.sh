@@ -17,6 +17,7 @@ force_rm() {
 	fi
 }
 
+force_rm .profile
 force_rm .bash_history
 force_rm .bash_logout
 force_rm .bash_profile

@@ -2,11 +2,6 @@
 # ~/.bash_profile
 #
 
-# startx in login
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-startx
-fi
-
 HISTIGNORE='ll*:la*:cd*:ls:clear:mutt'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
@@ -15,5 +10,23 @@ HISTIGNORE='ll*:la*:cd*:ls:clear:mutt'
 # add doom binary to PATH
 export PATH=$PATH:$HOME/.emacs.d/bin
 
-# local bin
+# implicit local bin
 export PATH=$PATH:$HOME/.local/bin
+
+# explicit local bin
+export PATH=$PATH:$HOME/bin
+
+# solana path
+export PATH="/home/yasushi/.local/share/solana/install/active_release/bin:$PATH"
+
+# ruby path
+export PATH="/root/.local/share/gem/ruby/3.0.0/bin:$PATH"
+
+# nfk path
+export PATH="/usr/local/bin/:$PATH"
+
+
+# start x at login shell
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi

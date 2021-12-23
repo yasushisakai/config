@@ -4,6 +4,7 @@
 # terminal emulator
 super + Return
 	alacritty
+#	emacsclient -c -e '(+vterm/here "~/")'
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -44,13 +45,13 @@ shift + Print
 # volume and brightness
 
 XF86AudioRaiseVolume
-        pactl set-sink-volume 0 +5%
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioMute
-        amixer set Master toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86MonBrightnessUp
 	xbacklight -inc 5
@@ -58,10 +59,11 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	xbacklight -dec 5
 
-super + l
-	arandr
-	
 XF86AudioMedia
+	emacsclient -c
+	# emacsclient -t --eval "(org-agenda-list 1)" "(delete-other-windows)"
+
+shift + XF86AudioMedia
 	firefox
 
 #

@@ -1,14 +1,4 @@
 {
-    "e7ec48eb-aab1-499a-bd43-589c869dc81a": {
-        "id": "e7ec48eb-aab1-499a-bd43-589c869dc81a",
-        "name": "Stack Overflow",
-        "keyword": "so",
-        "cmd": "https://stackoverflow.com/search?q=%s",
-        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
-        "is_default_search": true,
-        "run_without_argument": false,
-        "added": 1632437032.6993814
-    },
     "f0a60db2-d691-465f-9e24-5cba660b9ff6": {
         "id": "f0a60db2-d691-465f-9e24-5cba660b9ff6",
         "name": "Wikipedia",
@@ -22,41 +12,21 @@
     "0ca3d1fe-c989-4b55-a3c8-5c53d8023356": {
         "id": "0ca3d1fe-c989-4b55-a3c8-5c53d8023356",
         "name": "duckduckgo",
-        "keyword": "s",
+        "keyword": "duck",
         "cmd": "https://duckduckgo.com/?q=%s",
         "icon": null,
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1632537655.2572467
     },
-    "c1c3ead5-838b-4508-b2e9-fdf271aaa65d": {
-        "id": "c1c3ead5-838b-4508-b2e9-fdf271aaa65d",
-        "name": "emacs",
-        "keyword": "emacs",
-        "cmd": "emacsclient -c",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1636250709.2043147
-    },
-    "88c3a51d-3bac-4102-a5c7-fdc1b3925496": {
-        "id": "88c3a51d-3bac-4102-a5c7-fdc1b3925496",
-        "name": "shutdown",
-        "keyword": "shutdown",
-        "cmd": "sudo shutodown -h now",
+    "71d4a7f4-1459-4ee7-b195-63d3843088a0": {
+        "id": "71d4a7f4-1459-4ee7-b195-63d3843088a0",
+        "name": "spotify",
+        "keyword": "spot",
+        "cmd": "https://open.spotify.com/search/%s",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": false,
-        "added": 1636600897.1239061
-    },
-    "2c138e88-606e-4f4a-ab6d-c9ae6fbfd736": {
-        "id": "2c138e88-606e-4f4a-ab6d-c9ae6fbfd736",
-        "name": "reboot",
-        "keyword": "reboot",
-        "cmd": "sudo reboot\n",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": false,
-        "added": 1636600910.1189125
+        "added": 1637365234.1713316
     }
 }

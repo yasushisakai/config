@@ -2,8 +2,8 @@
 
 $latex = 'lualatex -synctex=1 -halt-on-error';
 $latex_silent = 'lualatex -synctex=1 -halt-on-error -interaction=nonstopmode';
-$bibtex = 'pbibtex';
-$biber = 'biber -uU --output-safechars';
+# $bibtex = 'pbibtex';
+# $biber = 'biber -uU --output-safechars';
 # $dvipdf = 'dvipdfmx %O -o %D %S';
 $makeindex = 'mende %O -o %D %S';
 $max_repeat = 5;

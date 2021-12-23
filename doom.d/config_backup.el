@@ -115,3 +115,4 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 (use-package! mixed-pitch
   :hook
   (text-mode . mixed-pitch-mode))
+

@@ -1,13 +1,12 @@
 #+OPTIONS: toc:nil
-#+OPTIONS: title:nil
-#+LATEX_HEADER: \newcommand{\headauthor}{Yasushi Sakai}
-#+LATEX_CLASS_OPTIONS: [11pt,letterpaper, notitlepage, dvipdfmx]
+#+OPTIONS: prop:nil
+#+LATEX_CLASS_OPTIONS: [11pt,letterpaper]
 
 #+LATEX_HEADER: \usepackage{lmodern}
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 #+LATEX_HEADER: \usepackage[scaled]{helvet}
 
-#+LATEX_HEADER: \usepackage[letterpaper,left=37pt,right=215pt,top=84pt,bottom=62pt,includefoot,driver=dvipdfm]{geometry}
+#+LATEX_HEADER: \usepackage[letterpaper,left=37pt,right=215pt,top=84pt,bottom=62pt,includefoot]{geometry}
 #+LATEX_HEADER: \setlength{\marginparwidth}{149pt}
 #+LATEX_HEADER: \setlength{\marginparsep}{23pt}
 #+LATEX_HEADER: \renewcommand{\baselinestretch}{1.3} % line height
@@ -17,10 +16,12 @@
 #+LATEX_HEADER: \vskip -5em
 #+LATEX_HEADER: {\noindent \thickrule \par}
 #+LATEX_HEADER: \vskip 1.5em
-#+LATEX_HEADER: {\noindent \Huge \textbf{\textsf{\@title}}}
+#+LATEX_HEADER: {\noindent \Huge \textbf{\textsf{\headtitle}}}
+#+LATEX_HEADER: \vskip 1.5em
+#+LATEX_HEADER: {\noindent \Large \textbf{\textsf{\headsubtitle}}}
 #+LATEX_HEADER: \vskip 5em
 #+LATEX_HEADER: {\noindent \textbf{\textsf{\@author}}} \par
-#+LATEX_HEADER: {\noindent \textbf{\textsf{\@date}}} \par
+#+LATEX_HEADER: {\noindent \textbf{\textsf{\headdate}}} \par
 #+LATEX_HEADER: \vskip 1.5em
 #+LATEX_HEADER: {\noindent \thickrule}
 #+LATEX_HEADER: \vskip 10em \par

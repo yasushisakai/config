@@ -11,6 +11,7 @@ symlink() {
 	ln -s $BASEDIR/$1 $HOME/$2
 }
 
+symlink shell/profile .profile
 symlink shell/bash_history .bash_history
 symlink shell/bash_logout .bash_logout
 symlink shell/bash_profile .bash_profile
