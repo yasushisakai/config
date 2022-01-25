@@ -98,7 +98,7 @@ end
 
 local on_attach_ts = function(client, bufnr)
     vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
-    vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
+    vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting_sync()")
     vim.cmd("command! LspCodeAction lua vim.lsp.buf.code_action()")
     vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
     vim.cmd("command! LspRename lua vim.lsp.buf.rename()")
@@ -111,6 +111,7 @@ local on_attach_ts = function(client, bufnr)
     vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")    
 
 	buf_map(bufnr, "n", "gd", ":LspDef<CR>")
+	buf_map(bufnr, "n", "gf", ":LspFormatting<CR>")
     buf_map(bufnr, "n", "gr", ":LspRename<CR>")
     buf_map(bufnr, "n", "gy", ":LspTypeDef<CR>")
     buf_map(bufnr, "n", "K", ":LspHover<CR>")
@@ -215,6 +216,7 @@ set undofile
 set guifont=HackGenNerd:h18
 
 """"""""""""""""""""""""""""""""""""""""""""
+
 " key bindings
 let mapleader = "\<Space>"
 map ; :
@@ -222,6 +224,10 @@ noremap ;; ;
 inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
+
+" exit from terminal
+tnoremap jk <C-\><C-n>
+nnoremap <leader>t <cmd>terminal<cr>
 
 " Very magic by default
 nnoremap ? ?\v

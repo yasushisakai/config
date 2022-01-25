@@ -13,7 +13,7 @@ alias vim='nvim'
 alias mutt=neomutt
 # remove files interactively
 alias rm='rm -i'
-alias mbsync='mbsync -aq'
+# alias mbsync='mbsync -aq'
 
 alias xclip='xclip -sel clip'
 
