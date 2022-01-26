@@ -89,6 +89,12 @@ _G.packer_plugins = {
     path = "/home/yasushi/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["nord-vim"] = {
+    config = { "\27LJ\1\0024\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0\21colorscheme nord\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/yasushi/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/yasushi/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -109,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/yasushi/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/yasushi/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope.nvim"] = {
     config = { "\27LJ\1\2ç\1\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0Ç\1\t\t\t\tnnoremap <leader>f :Telescope find_files<cr>\n\t\t\t\tnnoremap <leader>r :Telescope live_grep<cr>\n\t\t\t\tnnoremap <leader>b :Telescope buffers<cr>\n\t\t\t\tnnoremap <leader>h :Telescope help_tags<cr>\n\t\t\t\bcmd\bvim\0" },
     keys = { { "n", "<leader>f" }, { "n", "<leader>r" }, { "n", "<leader>b" }, { "n", "<leader>h" } },
@@ -126,12 +137,16 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nord-vim
+time([[Config for nord-vim]], true)
+try_loadstring("\27LJ\1\0024\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0\21colorscheme nord\bcmd\bvim\0", "config", "nord-vim")
+time([[Config for nord-vim]], false)
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
+vim.cmd [[nnoremap <silent> <leader>r <cmd>lua require("packer.load")({'telescope.nvim'}, { keys = "<lt>leader>r", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[nnoremap <silent> <leader>f <cmd>lua require("packer.load")({'telescope.nvim'}, { keys = "<lt>leader>f", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> <leader>h <cmd>lua require("packer.load")({'telescope.nvim'}, { keys = "<lt>leader>h", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> <leader>b <cmd>lua require("packer.load")({'telescope.nvim'}, { keys = "<lt>leader>b", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[nnoremap <silent> <leader>f <cmd>lua require("packer.load")({'telescope.nvim'}, { keys = "<lt>leader>f", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[nnoremap <silent> <leader>r <cmd>lua require("packer.load")({'telescope.nvim'}, { keys = "<lt>leader>r", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 if should_profile then save_profiles() end
