@@ -13,6 +13,7 @@ function on_attach(client, bufnr)
 		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', options)
 		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', options)
 		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<cr>', options)
+		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gm', '<cmd>lua vim.lsp.buf.rename()<cr>', options)
 		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', options)
 		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'g]', '<cmd>lua vim.diagnostic.goto_next()<cr>', options)
 		vim.api.nvim_buf_set_keymap(bufnr, 'n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<cr>', options)
@@ -47,6 +48,47 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
+
+-- json
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+nvim_lsp.jsonls.setup{
+	capabilities = capabilities
+}
+
+-- vue
+nvim_lsp.volar.setup{
+	filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+	init_options = {
+		typescript = {
+			serverPath = '/home/yasushi/.nvm/versions/node/v17.1.0/lib/node_modules/typescript/lib/tsserverlibrary.js'
+		}
+	}
+
+}
+
+-- typescript
+nvim_lsp.tsserver.setup {
+    on_attach = function(client, bufnr)
+
+		local ts_utils = require("nvim-lsp-ts-utils")
+        ts_utils.setup({})
+        ts_utils.setup_client(client) 
+
+		on_attach(client, bufnr)
+    end
+}
+
+-- local null_ls = require("null-ls")
+-- null_ls.setup({
+--     sources = {
+--         null_ls.builtins.diagnostics.eslint,
+--         null_ls.builtins.code_actions.eslint,
+--         null_ls.builtins.formatting.prettier
+--     },
+--     on_attach = on_attach
+-- })
 
 -- cmp
 local cmp = require'cmp'

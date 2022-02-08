@@ -9,6 +9,6 @@ vim.g.mapleader = " "
 keymap('i', 'jk', '<Esc>', opts)
 
 -- in/out terminal
-nkeymap('<leader>t','<cmd>termainal<cr>',{})
+nkeymap('<leader>t','<cmd>terminal<cr>',{})
 keymap('t', 'jk', '<c-\\><c-n>', {})
 

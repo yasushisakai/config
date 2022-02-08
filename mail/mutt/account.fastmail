@@ -31,7 +31,7 @@ set postponed = "+/Drafts"
 ## emulating google web client
 bind editor <space> noop
 # macro index,pager y "<save-message>=Archive<enter><enter>" "Archive"
-macro index,pager y ';<save-message>!Archive<tab><enter><enter>' "Move message to Archive"
+macro index,pager y ";<save-message>!Archive<tab><enter><enter>" "Move message to Archive"
 macro index,pager d "<save-message>=Trash<enter><enter>" "Trash"
 macro index <Space>i "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index <Space>a "<change-folder>=Archive<enter>" "Go to archive"

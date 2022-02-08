@@ -30,6 +30,9 @@ require('packer').startup(function()
 
 	use 'simrat39/rust-tools.nvim'
 
+	use 'jose-elias-alvarez/null-ls.nvim'
+	use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
 	use {'arcticicestudio/nord-vim',
 	config = function() 
 		vim.cmd[[colorscheme nord]]

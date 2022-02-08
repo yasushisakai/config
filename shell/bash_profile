@@ -25,6 +25,9 @@ export PATH="/root/.local/share/gem/ruby/3.0.0/bin:$PATH"
 # nfk path
 export PATH="/usr/local/bin/:$PATH"
 
+# yarn
+export PATH="$(yarn global bin):$PATH"
+
 
 # start x at login shell
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
