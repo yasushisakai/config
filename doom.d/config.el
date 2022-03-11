@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq user-full-name "Yasushi Sakai"
-      user-mail-address "yasushi@fastmail.com")
+      user-mail-address "yasushi.accounts@fastmail.com")
 
 ;; make emacs 'tile' when running in bspwm (it floats)
 (setq frame-resize-pixelwise t)
@@ -19,7 +19,7 @@
 
 ;; org mode
 ;; needs to have this before org
-(setq org-directory "~/org/")
+(setq org-directory "~/Dropbox/org/")
 
 ;; org agenda filtering
 (defun ys-org-skip-subtree-if-priority (priority)
@@ -88,17 +88,6 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 (setq org-html-doctype "html5")
 (setq org-latex-pdf-process(list "latexmk -f %f"))
 (setq org-html-validation-link nil)
-  (setq org-html-mathjax-options
-   '((path "https://yasushisakai.com/static/mathjax/MathJax.js?config=TeX-AMS_HTML,local/local")
-     (scale "100")
-     (align "center")
-     (font "TeX")
-     (linebreaks "false")
-     (autonumber "AMS")
-     (indent "0em")
-     (multlinewidth "85%")
-     (tagindent ".8em")
-     (tagside "right"))))
 
 (after! ox-latex
 (add-to-list 'org-latex-classes

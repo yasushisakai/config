@@ -19,6 +19,9 @@ require('packer').startup(function()
 		},
 	}
 
+	-- git
+	use  'tpope/vim-fugitive'
+
 	-- per language settings can be found in lspconfig.lua
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-cmp'
@@ -30,7 +33,6 @@ require('packer').startup(function()
 
 	use 'simrat39/rust-tools.nvim'
 
-	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'jose-elias-alvarez/nvim-lsp-ts-utils'
 
 	use {'arcticicestudio/nord-vim',

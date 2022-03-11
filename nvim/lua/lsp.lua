@@ -57,38 +57,15 @@ nvim_lsp.jsonls.setup{
 	capabilities = capabilities
 }
 
--- vue
-nvim_lsp.volar.setup{
-	filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
-	init_options = {
-		typescript = {
-			serverPath = '/home/yasushi/.nvm/versions/node/v17.1.0/lib/node_modules/typescript/lib/tsserverlibrary.js'
-		}
-	}
-
-}
-
 -- typescript
 nvim_lsp.tsserver.setup {
     on_attach = function(client, bufnr)
-
 		local ts_utils = require("nvim-lsp-ts-utils")
         ts_utils.setup({})
         ts_utils.setup_client(client) 
-
 		on_attach(client, bufnr)
     end
 }
-
--- local null_ls = require("null-ls")
--- null_ls.setup({
---     sources = {
---         null_ls.builtins.diagnostics.eslint,
---         null_ls.builtins.code_actions.eslint,
---         null_ls.builtins.formatting.prettier
---     },
---     on_attach = on_attach
--- })
 
 -- cmp
 local cmp = require'cmp'

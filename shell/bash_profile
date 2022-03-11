@@ -28,6 +28,8 @@ export PATH="/usr/local/bin/:$PATH"
 # yarn
 export PATH="$(yarn global bin):$PATH"
 
+# avm
+export PATH="/home/yasushi/.avm/bin:$PATH"
 
 # start x at login shell
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

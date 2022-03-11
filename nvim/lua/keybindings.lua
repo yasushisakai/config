@@ -12,3 +12,5 @@ keymap('i', 'jk', '<Esc>', opts)
 nkeymap('<leader>t','<cmd>terminal<cr>',{})
 keymap('t', 'jk', '<c-\\><c-n>', {})
 
+nkeymap('j','gj')
+nkeymap('k','gk')

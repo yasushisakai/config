@@ -22,3 +22,6 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.gdefault = true
+
+vim.opt.relativenumber = true
+vim.opt.number = true
