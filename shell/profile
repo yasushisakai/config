@@ -1,3 +1,5 @@
 . "$HOME/.cargo/env"
 
 EDITOR=nvim
+
+export PATH="/Users/yasushi/.local/share/solana/install/active_release/bin:$PATH"

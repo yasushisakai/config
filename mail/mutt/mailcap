@@ -1,6 +1,6 @@
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 # text/html; links -dump %s ; nametemplate=%s.html ; copiousoutput           
-# text/html; pandoc -f html -t markdown; copiousoutput; compose=vim %s
+text/html; $HOME/.config/mutt/view_attachment.sh %s html /Applications/Firefox.app/Contents/MacOS/firefox
 
 # Images
 image/jpeg; $HOME/.config/mutt/view_attachment.sh %s jpeg /System/Applications/Preview.app
